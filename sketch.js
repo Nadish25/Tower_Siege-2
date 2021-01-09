@@ -73,9 +73,9 @@ function setup() {
 
     box28=new BoxYellow(745,305,30,40);
    
-    polygon=new Polygon(200,300,50);
+    polygon=new Polygon(200,400,50);
 
-    sling=new SlingShot(polygon.body,{x:200,y:300});
+    sling=new SlingShot(polygon.body,{x:200,y:400});
 
     
 
@@ -148,6 +148,10 @@ function draw() {
   textSize(20);  
   text("Tries : "+tries,500,50);
 
+  fill("black")
+  textSize(20);  
+  text("Press Space to retry ",700,50);
+
  
 }
 
@@ -165,7 +169,7 @@ function draw() {
 
   function keyPressed() {
     if (keyCode === 32) {
-      Matter.Body.setPosition(polygon.body, {x:100, y:200}) 
+      
       sling.attach(polygon.body);
       tries=tries+1;
       beep.play();
