@@ -28,6 +28,8 @@ function setup() {
 	engine = Engine.create();
   world = engine.world;
 
+  backSound.loop();
+
     //Create the Bodies Here
     ground=new Ground(600,570,1200,20);
 
